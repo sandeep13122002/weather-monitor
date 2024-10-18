@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Monitoring System</title>
+</head>
+<body>
+    <h1>Daily Weather Summary</h1>
+    <table border="1">
+        <tr>
+            <th>Date</th>
+            <th>Avg Temperature (°C)</th>
+            <th>Max Temperature (°C)</th>
+            <th>Min Temperature (°C)</th>
+            <th>Dominant Condition</th>
+        </tr>
+        <% aggregates.forEach(data => { %>
+            <tr>
+                <td><%= data.date %></td>
+                <td><%= data.avgTemp %></td>
+                <td><%= data.maxTemp %></td>
+                <td><%= data.minTemp %></td>
+                <td><%= data.dominantCondition %></td>
+            </tr>
+        <% }); %>
+    </table>
+</body>
+</html>
